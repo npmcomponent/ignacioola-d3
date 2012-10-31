@@ -7,6 +7,6 @@
   "dependencies": {},
   "development": {},
   "scripts": [
-    "index.js"
+    "d3.v2.js"
   ]
 }

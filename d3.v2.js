@@ -1,4 +1,4 @@
-(function() {
+function d3 () {
   function d3_class(ctor, properties) {
     try {
       for (var key in properties) {
@@ -7023,4 +7023,6 @@
   d3.time.scale.utc = function() {
     return d3_time_scale(d3.scale.linear(), d3_time_scaleUTCMethods, d3_time_scaleUTCFormat);
   };
-})();
+};
+
+module.exports = d3;
