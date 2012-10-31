@@ -30,13 +30,13 @@ body {
 
 </style>
 <body>
-<script src="../../d3.v2.js"></script>
+<script src="../../build/build.js"></script>
 <script>
+var d3 = require('d3/d3.v2.js')();
 
 var data = d3.range(40).map(function(i) {
   return {x: i / 39, y: (Math.sin(i / 3) + 2) / 4};
 });
-
 var margin = {top: 10, right: 10, bottom: 20, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
