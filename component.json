@@ -1,5 +1,12 @@
 {
   "name": "d3",
+  "repo": "component/d3",
   "version": "2.10.3",
-  "main": "./d3.v2.js"
+  "description": "A JavaScript visualization library for HTML and SVG.",
+  "keywords": ["d3", "chart", "svg"],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
 }
