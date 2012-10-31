@@ -9,7 +9,7 @@ LOCALE ?= en_US
 all: \
 	d3.v2.js \
 	d3.v2.min.js \
-	component.json \
+	component \
 	package.json
 
 # Modify this rule to build your own custom release.
@@ -249,5 +249,11 @@ package.json: src/package.js
 	node src/package.js > $@
 	@chmod a-w $@
 
+component: components
+	@component build --dev
+
+components:
+	@component install --dev
+
 clean:
-	rm -f d3*.js package.json
+	rm -rf d3*.js package.json components build
