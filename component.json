@@ -6,7 +6,7 @@
   "keywords": ["d3", "chart", "svg"],
   "dependencies": {},
   "development": {},
-  "main": "./d3.v2.js",
+  "main": "d3.v2.js",
   "scripts": [
     "d3.v2.js"
   ]
