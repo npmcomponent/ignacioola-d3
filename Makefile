@@ -8,7 +8,7 @@ LOCALE ?= en_US
 all: \
 	d3.js \
 	d3.min.js \
-	component.json \
+	component \
 	package.json
 
 # Modify this rule to build your own custom release.
@@ -271,6 +271,12 @@ package.json: src/package.js
 	node src/package.js > $@
 	@chmod a-w $@
 
+component: components
+	@component build --dev
+
+components:
+	@component install --dev
+
 src/core/format-$(LOCALE).js: src/locale.js src/core/format-locale.js
 	LC_NUMERIC=$(LOCALE) locale -ck LC_NUMERIC | node src/locale.js src/core/format-locale.js > $@
 
@@ -282,4 +288,4 @@ src/time/format-$(LOCALE).js: src/locale.js src/time/format-locale.js
 	src/time/format-$(LOCALE).js
 
 clean:
-	rm -f d3*.js package.json component.json
+	rm -rf d3*.js package.json components build
